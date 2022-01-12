@@ -19,16 +19,17 @@ function Contact() {
         <Heading pagname="Contact Us" />
       </div>
 
-      <div className="flex justify-center align-items-center">
+
         <div className=" grid lg:grid-cols-2 grid-cols-1  ">
-          <div className="map mt-5 ml-20 w-full ">
-            <iframe
+          <div className="map w-1/2 border-2 border-black">
+            <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1455.60369312146!2d72.56334564300455!3d23.031668564003056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85a79eebdec9%3A0xd0ab8cb58ab0d0dc!2sTechno%20IT%20HUB!5e0!3m2!1sen!2sin!4v1636615698970!5m2!1sen!2sin"
-              style={style}
+              className="h-full"            
               allowfullscreen="true"
               title="map_location"
             />
           </div>
+       
 
           <div className="contact-details ml-20 mt-5">
             <div className=" flex align-items-center justify-content-baseline ml-16  ">
@@ -38,48 +39,36 @@ function Contact() {
               </h2>
             </div>
 
-            <div className="mt-10 border-4 pl-8">
-              <div className="flex mt-5  ">
-                <Avatar src="https://thumbs.dreamstime.com/b/red-maps-pin-location-map-icon-location-pin-pin-icon-vector-red-maps-pin-location-map-icon-location-pin-pin-icon-vector-vector-140200096.jpg" />
+          {/* flexbox for contact details */}
+          <div className = "main flex flex-col border-2 border-black">
+            <div className = "grid lg:grid-cols-2 grid-cols-1 place-items-center"> 
+            <div>
+              <Avatar> </Avatar>
+            </div>
+            <div>
+              <span>Address:</span> <p>GUJARAT INNOVATION COUNCIL</p>
+            </div>
+            </div>
 
-                <div className="ml-5 flex flex-col justify-center">
-                  <h2 className="font-bold md:text-lg">Address:</h2>
-                  <p class="font-semibold md:text-lg ml-4">
-                    GIC Block 3,L.D Engg Boys Hostel,{' '}
-                  </p>
-                </div>
+            <div className = "grid lg:grid-cols-2 grid-cols-1 place-items-center"> 
+            <div>
+              <Avatar> </Avatar>
               </div>
+            <div> </div>
+            </div>
 
-              <div className="mt-5  flex  ">
-                <div className="mr-6">
-                  <Avatar
-                    src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png"
-                
-                  />
-                </div>
-                <div className="ml-5  ">
-                  <h2 className="font-bold md:text-lg">Email:</h2>
-                  <p className="font-semibold md:text-lg sm:text-sm text-xl">
-                    technoithub111@gmail.com
-                  </p>
-                </div>
+            <div className = "grid lg:grid-cols-2 grid-cols-1 place-items-center"> 
+            <div>
+              <Avatar> </Avatar>
               </div>
-
-              <div className="flex mt-5 ">
-              <div className="mr-16"> 
-
-                <Avatar src="https://i.pinimg.com/originals/84/4e/8c/844e8cd4ab26c82286238471f0e5a901.png" />
-              </div>
-                <div className="ml-5">
-                  <h2 className="font-bold md:text-lg">Call:</h2>
-                  <p class="font-semibold md:text-lg"> +91 9898 6609 70</p>
-                </div>
-              </div>
+            <div> </div>
             </div>
           </div>
+           
+          </div>
         </div>
-      </div>
-      <div className="contactForm  flex justify-content-center align-items-center mt-12 mb-4">
+    
+      <div className="contactForm border-2 border-black flex justify-center align-items-center mt-12 mb-4 p-4">
         <form class="w-full max-w-lg border-gray-300">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -181,7 +170,7 @@ function Contact() {
               style={style1}
             />
           </div>
-          <div className="flex justify-content-center align-items-center">
+          <div className="flex justify-center align-items-center">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
               Submit
             </button>

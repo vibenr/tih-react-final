@@ -9,7 +9,7 @@ const [data,setdata]=useState({
   password:""
 })
 
-const url="https://tihbackendapi.herokuapp.com/checkadmin"
+const url="http://tihbackendapi.herokuapp.com/checkadmin"
 
 const handle=(e)=>{
 const newdata=[...data]

@@ -1,8 +1,3 @@
-
-
-
-
-
   import './App.css';
   import Header from "./Components/Header/Header"
   import Services from "./Components/Services/Service"
@@ -12,19 +7,16 @@
   import About from "./Components/About/About"
   import Login from "./Components/LoginPage/Login"
   import Contact from "./Components/Contact/Contact"
+  import Dataform from "./Components/DataForm/Dataform"
   import {Route, Routes } from 'react-router-dom'
-const Example = () => {
-
 
 function App() {
   return (
     <div className="App">
 <Header/>
 
-
-
 <Routes>
-
+<Route path="/addform/data" element={<Dataform/>}/>
 <Route path="/services" element={<Services/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/about" element={<About/>} />
@@ -32,21 +24,7 @@ function App() {
 <Route path="/startups" element={<Startups/>} />
 <Route path="/courses" element={<Courses/>} />
 <Route path="/activities" element={<Activites/>} />
-
-
-
-
-
-
-
 </Routes>
-
-
-
-
-
-
-
     </div>
   );
 }
