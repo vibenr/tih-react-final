@@ -13,7 +13,7 @@
 function App() {
   return (
     <div className="App">
-{/* <Header/> */}
+
 
 <Routes>
 <Route path="/addform/data" element={<Dataform/>}/>
@@ -22,6 +22,7 @@ function App() {
 <Route path="/about" element={<About/>} />
 <Route path="/startups" element={<Startups/>} />
 <Route path="/courses" element={<Courses/>} />
+<Route path="/" element={<Header/>} />
 <Route path="/activities" element={<Activites/>} />
 </Routes>
     </div>
