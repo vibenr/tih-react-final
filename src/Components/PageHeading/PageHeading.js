@@ -2,7 +2,7 @@ import React from 'react';
 
 function PageHeading({ pagname }) {
 	const styleheader = {
-		width: '30%',
+		width: 'auto',
 		color: 'whitesmoke',
 		fontFamily: 'Monospace, Cursive, Sans-serif',
 		fontSize: '1.6rem',
@@ -13,7 +13,8 @@ function PageHeading({ pagname }) {
 		borderRadius: '0.5rem',
 		boxShadow: '10px 10px 5px 0px rgba(0,0,0,0.75)',
 		webkitBoxShadow: '10px 10px 5px 0px rgba(0,0,0,0.75)',
-		mozkitBoxShadow: '10px 10px 5px 0px rgba(0,0,0,0.75)'
+		mozkitBoxShadow: '10px 10px 5px 0px rgba(0,0,0,0.75)',
+		padding: '0.5rem',
 	};
 
 	return (
