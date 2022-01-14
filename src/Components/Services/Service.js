@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react';
 import React from 'react';
 import Card from '../Card/Card';
 import Heading from '../PageHeading/PageHeading';
+import Header from '../Header/Header'
 
 
 
@@ -40,7 +41,7 @@ useEffect(()=>{
 	return (
 	
 		<div className='Service '>
-		
+			<Header />
 			<div className='flex items-center flex-col justify-center' >
 			<Heading pagname='SERVICES' className="border-2 border-black" />
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4'>

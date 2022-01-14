@@ -13,14 +13,13 @@
 function App() {
   return (
     <div className="App">
-<Header/>
+{/* <Header/> */}
 
 <Routes>
 <Route path="/addform/data" element={<Dataform/>}/>
 <Route path="/services" element={<Services/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/about" element={<About/>} />
-<Route path="/contact" element={<Contact/>} />
 <Route path="/startups" element={<Startups/>} />
 <Route path="/courses" element={<Courses/>} />
 <Route path="/activities" element={<Activites/>} />

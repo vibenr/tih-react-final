@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../PageHeading/PageHeading'
 import { useState, useEffect } from 'react'
+import Header from '../Header/Header'
 
 function Startup() {
 
@@ -24,6 +25,7 @@ function Startup() {
 
   return (
     <>
+      <Header />
       <div className="flex justify-center mb-8">
         <Heading pagname="Startups" className="border-2 border-black " />
       </div>

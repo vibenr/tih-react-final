@@ -27,7 +27,6 @@ function Header() {
            <NavLink to = "/startups">STARTUPS</NavLink>
            <NavLink to = "/activities">ACTIVITIES</NavLink>
            <NavLink to = "/about">ABOUT</NavLink>
-           <NavLink to = "/contact">CONTACT</NavLink>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
@@ -80,7 +79,6 @@ function Header() {
               <NavLink to = "/startups">STARTUPS</NavLink>
               <NavLink to = "/activities">ACTIVITIES</NavLink>
               <NavLink to = "/about">ABOUT</NavLink>
-              <NavLink to = "/contact">CONTACT</NavLink>
               </div>
             </div>
           </div>

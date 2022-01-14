@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 import Heading from '../PageHeading/PageHeading';
+import Header from '../Header/Header'
 
 import { useState, useEffect } from 'react';
 
@@ -24,6 +25,7 @@ function Actitvity() {
 
   return (
     <>
+      <Header />
       <div className="flex items-center flex-col justify-center h-full w-full ">
       <Heading pagname="Activities" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-10 ">
