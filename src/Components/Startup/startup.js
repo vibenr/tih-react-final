@@ -34,15 +34,15 @@ function Startup() {
           initial.map(
             (card) => (
               <div className="w-full lg:w-3/4 p-3 lg:mx-auto">
-                <div className="grid lg:grid-cols-2 grid-cols-1  rounded overflow-hidden h-auto lg:h-auto border shadow shadow-lg">
-                 <div className="lg:w-3/4  h-full border-2">
+                <div className="grid lg:grid-cols-2 grid-cols-1  rounded overflow-hidden h-auto lg:h-auto  shadow-lg">
+                 <div className="lg:w-3/4  h-full ">
                   <img
                     className="  w-full h-full   flex-none bg-cover "
                     src="https://images.ctfassets.net/hrltx12pl8hq/61DiwECVps74bWazF88Cy9/2cc9411d050b8ca50530cf97b3e51c96/Image_Cover.jpg?fit=fill&w=480&h=270"
                     alt="alternative"
                   />
                   </div>
-                  <div className="w-full border-2">
+                  <div className="w-full ">
 
                     <p className="text-2xl font-bold text-center">{card.title} </p>
                   <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4   ">
