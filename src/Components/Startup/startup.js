@@ -44,9 +44,9 @@ function Startup() {
                   </div>
                   <div className="w-full ">
 
-                    <p className="text-2xl font-bold text-center">{card.title} </p>
+                    <p className="text-2xl font-bold mt-2 text-center">{card.title} </p>
                   <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4   ">
-                    <p className="text-grey-darker text-base mt-8">
+                    <p className="text-grey-darker text-base mt-2">
                       {card.description}
                     </p>{' '}
                     

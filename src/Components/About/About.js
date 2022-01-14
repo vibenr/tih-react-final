@@ -15,7 +15,7 @@ function About() {
 
 			<PageHeading pagname="ABOUT US"/>
 			</div>
-			<div className = "grid grid-cols-2 mt-4 p-4 gap-12 ">
+			<div className = "grid grid-cols-1 lg:grid-cols-2 mt-4 p-4 gap-12 ">
 				<div> 
 					<p className = "break-normal tracking-wide"> 
 					Techno IT Hub is a startup and mentoring hub which offers guidance and encouragement, Create Opportunities, Offer technical as well as non-technical solutions, Support aspiring minds.

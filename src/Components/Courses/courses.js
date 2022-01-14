@@ -40,7 +40,6 @@ function Service() {
             ))}
         </div>
       </div>
-      <div className="absolute  w-full"></div>
     </div>
   )
 }
