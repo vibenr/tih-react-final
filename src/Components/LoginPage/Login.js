@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Header from '../PageHeading/PageHeading'
 import axios from 'axios'
 import { Navigate } from 'react-router-dom'
+import Heading from '../Header/Header'
 function Login() {
   const [status, setstatus] = useState('501')
   const [username, setusername] = useState('')
@@ -24,7 +25,9 @@ function Login() {
 
   return (
     <>
-      <div></div>
+      <div>
+        <Heading />
+      </div>
       {status === '200' && <Navigate to="/addform/data" />}
 
       {status !== '200' && (
