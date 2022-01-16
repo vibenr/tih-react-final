@@ -27,88 +27,69 @@ function Form({ heading }) {
 
       {status !== '200' && (
         <>
-          <div className="flex justify-center">
-            <Header pagname={heading} />
-          </div>
-          <div className="flex justify-center mt-2 align-items-center">
-            <p className="text-red-400">*Only Admin Can Login</p>
-          </div>
-          <div class="max-h-screen flex items-center justify-center bg-gray-50 py-12  px-4 sm:px-6 lg:px-8">
-            <div class="max-w-md w-full space-y-8">
-              <div>
-                <img
-                  class="mx-auto h-12 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt="Workflow"
-                />
-                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                  Log in to your account
-                </h2>
-              </div>
-              <form class="mt-8 space-y-6" method="POST" action="#" onSubmit={login}>
-                <div class="rounded-md shadow-sm -space-y-px">
-                  <div>
-                    <label for="username" class="sr-only">
-                      Username
-                    </label>
-                    <input
-                      onChange={(e) => {
-                        setusername(e.target.value)
-                      }}
-                      name="username"
-                      value={username}
-                      type="text"
-                      autocomplete="text"
-                      required
-                      class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                      placeholder="Username"
-                    />
-                  </div>
-                  <div>
-                    <label for="password" class="sr-only">
-                      Password
-                    </label>
-                    <input
-                      onChange={(e) => {
-                        setpassword(e.target.value)
-                      }}
-                      name="password"
-                      value={password}
-                      type="password"
-                      autocomplete="current-password"
-                      required
-                      class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                      placeholder="Password"
-                    />
-                  </div>
-                </div>
+          <div className="grid place-items-center">
+            <div className="flex justify-center">
+              <Header pagname={heading} />
+            </div>
 
-                <div>
-                  <button
-                    type="submit"
-                    
-                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            <form className="w-full max-w-sm mt-14 md:p-x-8" onSubmit={login} method="POST">
+              <div className="md:flex md:items-center mb-6">
+                <div className="md:w-1/3">
+                  <label
+                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                    for="inline-full-name"
                   >
-                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                      <svg
-                        class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                    Log In
+                    Username
+                  </label>
+                </div>
+                <div className="md:w-2/3">
+                  <input
+                    className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    id="inline-full-name"
+                    type="text"
+                    value={username}
+                    onChange={(e) => {
+                      setusername(e.target.value)
+                    }}
+                    placeholder="Enter Your Username"
+                  />
+                </div>
+              </div>
+              <div className="md:flex md:items-center mb-6">
+                <div className="md:w-1/3">
+                  <label
+                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                    for="inline-password"
+                  >
+                    Password
+                  </label>
+                </div>
+                <div className="md:w-2/3">
+                  <input
+                    className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    name="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => {
+                      setpassword(e.target.value)
+                    }}
+                    placeholder="Enter Your Password"
+                  />
+                </div>
+              </div>
+
+              <div className="md:flex md:items-center">
+                <div className="md:w-1/3"></div>
+                <div className=" flex justify-center">
+                  <button
+                    className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                    type="submit"
+                  >
+                    LOGIN
                   </button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </>
       )}
@@ -122,3 +103,24 @@ export default Form
   'Content-Type': 'application/json',
   'Access-Control-Request-Headers': '*',
 }, */
+
+{
+  /* <div className="flex justify-center mt-2 align-items-center">
+<p className="text-red-400">*Only Admin Can Login</p>
+</div>
+<div className="max-h-screen flex items-center justify-center bg-gray-50 py-12  px-4 sm:px-6 lg:px-8">
+<div className="max-w-md w-full space-y-8">
+  <div>
+    <img
+      className="mx-auto h-12 w-auto"
+      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+      alt="Workflow"
+    />
+    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+      Log in to your account
+    </h2>
+  </div>
+  
+</div>
+</div> */
+}
