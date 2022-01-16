@@ -24,7 +24,7 @@ function Card({ heading, source, paragraph, button, price }) {
             Enroll Now
           </button>
         )}
-        {button && (
+        {price && (
           <button className="bg-blue-800 text-white font-semibold p-2 rounded-lg  hover:bg-blue-400 mb-6 lg:mb-4 ">
             {price}
           </button>
