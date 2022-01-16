@@ -8,14 +8,14 @@ function Login() {
   const [username, setusername] = useState('')
   const [password, setpassword] = useState('')
 
-  const url = 'https://tih-backend.herokuapp.com/checkadmin'
+  const url =
 
   function login(e) {
     e.preventDefault()
     let data = { username, password }
     console.log(data)
 
-    axios.post(url, data).then((response) => {
+    axios.post('https://tih-backend.herokuapp.com/checkadmin', data).then((response) => {
       console.log(response.status)
       if (response.status === 200) {
         setstatus('200')
