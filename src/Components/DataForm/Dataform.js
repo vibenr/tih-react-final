@@ -5,15 +5,13 @@ import Addform from '../Addform/Addform'
 
 function DataForm() {
   const [currenttab, settab] = useState('/')
+  const [route, setroute] = useState('/')
 
   return (
     <>
       <div className="rounded-lg shadow bg-base-200 drawer h-30">
-       
         <div className="flex flex-col drawer-content">
           <div className="w-full navbar bg-base-300">
-            
-
             <div className="lg:block">
               <ul className="menu horizontal text-black">
                 <li>
@@ -22,13 +20,15 @@ function DataForm() {
                 <li
                   onClick={() => {
                     settab('SERVICES')
+                    setroute('services')
                   }}
                 >
                   Service
-                </li> 
+                </li>
                 <li
                   onClick={() => {
                     settab('COURSES')
+                    setroute('courses')
                   }}
                 >
                   Courses
@@ -36,6 +36,7 @@ function DataForm() {
                 <li
                   onClick={() => {
                     settab('STARTUP')
+                    setroute('startup')
                   }}
                 >
                   Startup
@@ -47,7 +48,7 @@ function DataForm() {
 
         {currenttab === '/' && <Addform />}
 
-        {currenttab !== '/' && <RedirectForm pageheading={currenttab} />}
+        {currenttab !== '/' && <RedirectForm pageheading={currenttab} routes={route} />}
       </div>
     </>
   )
