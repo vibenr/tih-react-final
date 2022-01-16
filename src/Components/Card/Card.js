@@ -4,11 +4,14 @@ function Card({ heading, source, paragraph, button, price }) {
   return (
     <div className="max-w-sm h-auto rounded  shadow-lg  p-4  ">
       {source && (
+        <>
         <img
           className="w-full h-1/2"
-          src="https://mega.nz/folder/6UdXyIwT#vWKHuZfwAx57DHVCb2Dl1w/file/rJ0mQThI"
+          src={source}
           alt="Sunset in the mountains"
         />
+        <p className="font-bold text-3xl">{source}</p>
+      </>
       )}
       <div className="">
         {heading && (
