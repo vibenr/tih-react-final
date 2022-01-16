@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from '../Header/Header'
+import Header from '../PageHeading/PageHeading'
 import axios from 'axios'
 import { Navigate } from 'react-router-dom'
 function Login() {
@@ -10,7 +10,7 @@ function Login() {
   const url = 'https://tih-backend.herokuapp.com/checkadmin'
 
   function login(e) {
-      e.preventDefault()
+    e.preventDefault()
     let data = { username, password }
     console.log(data)
 
@@ -24,9 +24,7 @@ function Login() {
 
   return (
     <>
-      <div>
-        <Header />
-      </div>
+      <div></div>
       {status === '200' && <Navigate to="/addform/data" />}
 
       {status !== '200' && (
@@ -40,7 +38,9 @@ function Login() {
             </p>
             <form
               className="w-full max-w-sm mt-14 md:p-x-8"
-              onSubmit={(e)=>{login(e)}}
+              onSubmit={(e) => {
+                login(e)
+              }}
               method="POST"
             >
               <div className="md:flex md:items-center mb-6">
