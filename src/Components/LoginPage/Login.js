@@ -15,7 +15,7 @@ function Login() {
     let data = { username, password }
     console.log(data)
 
-    axios.post('https://tih-backend.herokuapp.com/checkadmin', data).then((response) => {
+    axios.post('https://tih-backend.herokuapp.com/login/checkadmin', data).then((response) => {
       console.log(response.status)
       if (response.status === 200) {
         setstatus('200')
