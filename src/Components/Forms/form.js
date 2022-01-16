@@ -24,7 +24,7 @@ function Form({ heading }) {
     }
   }, []) */
 
-  async function login() {
+   function login() {
     let data = { username, password }
     console.warn(data)
 
@@ -38,12 +38,7 @@ function Form({ heading }) {
     history.push('/addform/data') */
   }
 
-  /* axios.post(url, data).then((response) => {
-      console.log(response.status)
-      if (response.status === 200) {
-        setstatus('200')
-      }
-    }) */
+
 
   return (
     <>
@@ -65,7 +60,7 @@ function Form({ heading }) {
               Log in to your account
             </h2>
           </div>
-          <form class="mt-8 space-y-6" onSubmit={login} method="post">
+          <form class="mt-8 space-y-6"  method="POST">
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
                 <label for="username" class="sr-only">
@@ -106,6 +101,7 @@ function Form({ heading }) {
             <div>
               <button
                 type="submit"
+                onClick={login}
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <span class="absolute left-0 inset-y-0 flex items-center pl-3">

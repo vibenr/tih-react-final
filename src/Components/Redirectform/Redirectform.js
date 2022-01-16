@@ -11,12 +11,11 @@ function Redirectform({ pageheading }) {
     e.preventDefault()
 
     const data = { title, description, image }
-    axios.post(
-      `https://tih-backend.herokuapp.com/addform/${pageheading}`,
-      data,
-    ).then((response) => {
-      console.log(response)
-    })
+    axios
+      .post(`https://tih-backend.herokuapp.com/addform/${pageheading}`, data)
+      .then((response) => {
+        console.log(response)
+      })
   }
 
   return (
@@ -29,8 +28,7 @@ function Redirectform({ pageheading }) {
           onSubmit={(e) => {
             submit(e)
           }}
-          method="post"
-          enctype="multipart/form-data"
+          method="POST"
         >
           <div className="flex flex-wrap -mx-3 mb-6">
             <label
