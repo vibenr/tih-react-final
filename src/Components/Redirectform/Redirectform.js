@@ -11,11 +11,17 @@ function Redirectform({ pageheading }) {
     e.preventDefault()
 
     const data = { title, description, image }
-    axios
-      .post(`https://tih-backend.herokuapp.com/addform/${pageheading}`, data)
-      .then((response) => {
-        console.log(response)
-      })
+    axios({
+      method: 'POST',
+      url: `https://tih-backend.herokuapp.com/addform/${pageheading}`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+      },
+      body:data
+    }).then((response) => {
+      console.log(response)
+    })
   }
 
   return (

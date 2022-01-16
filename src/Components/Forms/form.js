@@ -24,21 +24,24 @@ function Form({ heading }) {
     }
   }, []) */
 
-   function login() {
+  function login() {
     let data = { username, password }
     console.warn(data)
 
-    axios.post(url,data).then((response) => {
+    axios({
+      method: 'POST',
+      url: 'https://tih-backend.herokuapp.com/checkadmin',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+      },
+      body:data
+    }).then((response) => {
       console.log(response.status)
-      if (response.status === 200) {
-        setstatus('200')
-      }
     })
     /*     localStorage.setItem('user-info', JSON.stringify(result))
     history.push('/addform/data') */
   }
-
-
 
   return (
     <>
@@ -60,7 +63,7 @@ function Form({ heading }) {
               Log in to your account
             </h2>
           </div>
-          <form class="mt-8 space-y-6"  method="POST">
+          <form class="mt-8 space-y-6" method="POST">
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
                 <label for="username" class="sr-only">
