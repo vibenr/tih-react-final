@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import PageHeading from '../PageHeading/PageHeading'
 import axios from 'axios'
-import  {Navigate}  from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 function Redirectform({ pageheading, routes }) {
-/*   let history = useHistory() */
+  /*   let history = useHistory() */
   const [title, settitle] = useState('')
   const [description, setdesciption] = useState('')
   const [image, setimage] = useState('')
+  const [price, setprice] = useState('')
   const [status, setstatus] = useState('500')
   function submit(e) {
     e.preventDefault()
-    const data = { title, description, image }
+    const data = { title, description, image, price }
     axios
       .post(`https://tih-backend.herokuapp.com/addform/${pageheading}`, data)
       .then((response) => {
@@ -21,11 +22,9 @@ function Redirectform({ pageheading, routes }) {
       })
   }
 
-
   return (
     <>
-     
-{status==='200' && <Navigate to={`/${routes}`}/>}
+      {status === '200' && <Navigate to={`/${routes}`} />}
       {status !== '200' && (
         <>
           <PageHeading pagname={pageheading} />
@@ -93,8 +92,27 @@ function Redirectform({ pageheading, routes }) {
                       setimage(e.target.value)
                     }}
                     className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                    id="image"
                     name="image"
+                    required
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap  mb-2">
+                <div className="w-full md:w-full px-3 mb-6 md:mb-0">
+                  <label
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="grid-city"
+                  >
+                    Price (₹)
+                  </label>
+                  <input
+                    onChange={(e) => {
+                      setprice(e.target.value)
+                    }}
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    value={price}
+                    name="price"
                     required
                     type="text"
                   />
