@@ -21,7 +21,7 @@ function Startup() {
         })
     }
     servicedata()
-  }, [initial])
+  }, [])
 
   return (
     <>
@@ -55,7 +55,7 @@ function Startup() {
                 </div>
               </div>
             ),
-            [initial],
+           
           )}
       </div>
     </>
