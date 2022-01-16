@@ -13,7 +13,7 @@ function Card({ heading, source, paragraph, button, price }) {
         <p className="font-bold text-3xl">{source}</p>
       </>
       )}
-      <div className="">
+      <div className="h-full">
         {heading && (
           <div className="font-bold text-xl mb-2 text-center">{heading}</div>
         )}
