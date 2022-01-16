@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PageHeading from '../PageHeading/PageHeading'
-import Axios from 'axios'
+import axios from 'axios'
 
 function Redirectform({ pageheading }) {
   const [title, settitle] = useState('')
@@ -11,7 +11,7 @@ function Redirectform({ pageheading }) {
     e.preventDefault()
 
     const data = { title, description, image }
-    Axios.post(
+    axios.post(
       `https://tih-backend.herokuapp.com/addform/${pageheading}`,
       data,
     ).then((response) => {

@@ -28,7 +28,7 @@ function Form({ heading }) {
     let data = { username, password }
     console.warn(data)
 
-    axios.post(url,{body:data}).then((response) => {
+    axios.post(url,data).then((response) => {
       console.log(response.status)
       if (response.status === 200) {
         setstatus('200')
