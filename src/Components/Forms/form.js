@@ -45,7 +45,7 @@ function Form({ heading }) {
                   Log in to your account
                 </h2>
               </div>
-              <form class="mt-8 space-y-6" method="POST" onSubmit={login}>
+              <form class="mt-8 space-y-6" method="POST" action="#" onSubmit={login}>
                 <div class="rounded-md shadow-sm -space-y-px">
                   <div>
                     <label for="username" class="sr-only">
