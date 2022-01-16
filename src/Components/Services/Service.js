@@ -20,7 +20,7 @@ const [initial,final]=useState([]);
 useEffect(()=>{
 
 	const servicedata=async()=>{
-		await fetch(' https://tihbackendapi.herokuapp.com/api/services').then(res=>{
+		await fetch(' https://tih-backend.herokuapp.com/api/services').then(res=>{
 			if(res.ok){
 				return res.json();
 			}

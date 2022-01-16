@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import {NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -11,7 +11,9 @@ function Header() {
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
-              <span className="font-bold lg:text-lg text-md">TECHNO IT HUB</span>
+              <span className="font-bold lg:text-lg text-md">
+                TECHNO IT HUB
+              </span>
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -21,20 +23,20 @@ function Header() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-           <NavLink to = "/">HOME</NavLink>
-           <NavLink to = "/services">SERVICES</NavLink>
-           <NavLink to = "/courses">COURSES</NavLink>
-           <NavLink to = "/startups">STARTUPS</NavLink>
-           <NavLink to = "/activities">ACTIVITIES</NavLink>
-           <NavLink to = "/about">ABOUT</NavLink>
+            <Link to="/">HOME</Link>
+            <Link to="/services">SERVICES</Link>
+            <Link to="/courses">COURSES</Link>
+            <Link to="/startups">STARTUPS</Link>
+            <Link to="/activities">ACTIVITIES</Link>
+            <Link to="/about">ABOUT</Link>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a
-              href="/login"
+            <Link
+              to="/login"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
             >
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -73,12 +75,13 @@ function Header() {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-1 gap-y-4 ">
-              <NavLink to = "/">HOME</NavLink>
-              <NavLink to = "/services">SERVICES</NavLink>
-              <NavLink to = "/courses">COURSES</NavLink>
-              <NavLink to = "/startups">STARTUPS</NavLink>
-              <NavLink to = "/activities">ACTIVITIES</NavLink>
-              <NavLink to = "/about">ABOUT</NavLink>
+                <Link to="/">HOME</Link>
+                <Link to="/services">SERVICES</Link>
+                <Link to="/courses">COURSES</Link>
+                <Link to="/startups">STARTUPS</Link>
+                <Link to="/activities">ACTIVITIES</Link>
+                <Link to="/about">ABOUT</Link>
+                <Link to="/login">LOGIN</Link>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ function Actitvity() {
   const [initial, final] = useState([]);
   useEffect(() => {
     let servicedata = async () => {
-      await fetch(' https://tihbackendapi.herokuapp.com/api/activity')
+      await fetch(' https://tih-backend.herokuapp.com/api/activity')
         .then((res) => {
           if (res.ok) {
             return res.json();

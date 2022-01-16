@@ -9,7 +9,7 @@ function Service() {
 
   useEffect(() => {
     let servicedata = async () => {
-      await fetch(' https://tihbackendapi.herokuapp.com/api/courses')
+      await fetch(' https://tih-backend.herokuapp.com/api/courses')
         .then((res) => {
           if (res.ok) 
           {

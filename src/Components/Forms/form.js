@@ -1,35 +1,49 @@
-import React,{useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../PageHeading/PageHeading'
-import axios from "axios"
+import Dataform from '../DataForm/Dataform'
+/* import { useHistory } from 'react-router-dom'
+ */
+import axios from 'axios'
 function Form({ heading }) {
+  const [status, setstatus] = useState('501')
 
+  const [data, setdata] = useState({
+    username: ' ',
+    password: ' ',
+  })
 
-const [data,setdata]=useState({
-  username:"",
-  password:""
-})
+  const [username, setusername] = useState('')
+  const [password, setpassword] = useState('')
 
-const url="http://tihbackendapi.herokuapp.com/checkadmin"
+  const url = 'https://tih-backend.herokuapp.com/checkadmin'
+  /*  const history = useHistory()
+   */
+  /*   useEffect(() => {
+    if (localStorage.getItem('user-info')) {
+      history.push('/addform/data')
+    }
+  }, []) */
 
-const handle=(e)=>{
-const newdata=[...data]
-newdata[e.target.id]=e.target.value
-setdata(newdata)
-}
+  async function login() {
+    let data = { username, password }
+    console.warn(data)
 
-const submithandle=(e)=>{
-  
-e.preventDefault()
+    axios.post(url,{body:data}).then((response) => {
+      console.log(response.status)
+      if (response.status === 200) {
+        setstatus('200')
+      }
+    })
+    /*     localStorage.setItem('user-info', JSON.stringify(result))
+    history.push('/addform/data') */
+  }
 
-axios.post(url,{
-  username:data.username,
-  password:data.password
-}).then(response=>{
-  console.log(response)
-})
-
-}
-
+  /* axios.post(url, data).then((response) => {
+      console.log(response.status)
+      if (response.status === 200) {
+        setstatus('200')
+      }
+    }) */
 
   return (
     <>
@@ -51,24 +65,23 @@ axios.post(url,{
               Log in to your account
             </h2>
           </div>
-          <form class="mt-8 space-y-6"  onSubmit={(e)=>{
-submithandle(e)
-          }} method="post">
-            <input type="hidden" name="remember" value="true" />
+          <form class="mt-8 space-y-6" onSubmit={login} method="post">
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
-                <label for="email-address" class="sr-only">
+                <label for="username" class="sr-only">
                   Username
                 </label>
                 <input
-                onChange={(e)=>handle(e)}
-                  id="username"
+                  onChange={(e) => {
+                    setusername(e.target.value)
+                  }}
                   name="username"
+                  value={username}
                   type="text"
                   autocomplete="text"
                   required
                   class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Email address"
+                  placeholder="Username"
                 />
               </div>
               <div>
@@ -76,9 +89,11 @@ submithandle(e)
                   Password
                 </label>
                 <input
-                  onChange={(e)=>handle(e)}
-                  id="password"
+                  onChange={(e) => {
+                    setpassword(e.target.value)
+                  }}
                   name="password"
+                  value={password}
                   type="password"
                   autocomplete="current-password"
                   required
@@ -117,4 +132,5 @@ submithandle(e)
     </>
   )
 }
+
 export default Form
