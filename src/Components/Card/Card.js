@@ -5,7 +5,7 @@ function Card({ heading, source, paragraph,button}) {
 	return (
 		<div className='max-w-sm h-auto rounded  shadow-lg  p-4  '>
 			{source && <img className='w-full h-1/2' src={source} alt='Sunset in the mountains' />}
-			<div className='lg:px-6 lg:py-4'>
+			<div className=''>
 				{heading && <div className='font-bold text-xl mb-2 text-center'>{heading}</div>}
 				{ paragraph && <p className='text-gray-700 text-base mb-4 '>{paragraph}</p>}
 			</div>
