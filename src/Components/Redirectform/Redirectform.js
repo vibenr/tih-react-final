@@ -86,7 +86,7 @@ function Redirectform({ pageheading, routes }) {
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     for="grid-city"
                   >
-                    Upload The Image
+                    Upload The Image(url)
                   </label>
                   <input
                     onChange={(e) => {
