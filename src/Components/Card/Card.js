@@ -6,7 +6,7 @@ function Card({ heading, source, paragraph, button, price }) {
       {source && (
         <img
           className="w-full h-1/2"
-          src={source}
+          src="https://mega.nz/folder/6UdXyIwT#vWKHuZfwAx57DHVCb2Dl1w/file/rJ0mQThI"
           alt="Sunset in the mountains"
         />
       )}
