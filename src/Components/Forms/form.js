@@ -28,15 +28,7 @@ function Form({ heading }) {
     let data = { username, password }
     console.warn(data)
 
-    axios({
-      method: 'POST',
-      url: 'https://tih-backend.herokuapp.com/checkadmin',
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Request-Headers': '*',
-      },
-      body:data
-    }).then((response) => {
+    axios.post(url, data).then((response) => {
       console.log(response.status)
     })
     /*     localStorage.setItem('user-info', JSON.stringify(result))
@@ -133,3 +125,8 @@ function Form({ heading }) {
 }
 
 export default Form
+
+/* headers: {
+  'Content-Type': 'application/json',
+  'Access-Control-Request-Headers': '*',
+}, */
