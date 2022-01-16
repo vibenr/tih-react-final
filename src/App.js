@@ -6,7 +6,6 @@ import Startups from './Components/Startup/startup'
 import Activites from './Components/Activities/Activity'
 import About from './Components/About/About'
 import Login from './Components/LoginPage/Login'
-import Contact from './Components/Contact/Contact'
 import Dataform from './Components/DataForm/Dataform'
 import { Route, Routes } from 'react-router-dom'
 
