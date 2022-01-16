@@ -23,7 +23,7 @@ function Form({ heading }) {
 
   return (
     <>
-      {status === '200' && <Navigate to="/addform/data" />}
+      {status === '200' && <Navigate to='/addform/data' />}
 
       {status !== '200' && (
         <>
