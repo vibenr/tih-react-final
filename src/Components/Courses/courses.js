@@ -35,6 +35,7 @@ function Service() {
                 heading={card.title}
                 paragraph={card.description}
                 source={card.image}
+                price={card.price}
                 button
               />
             ))}
