@@ -22,7 +22,7 @@ function Card({ heading, source, paragraph, button, price }) {
       </div>
       <div className="flex flex-col justify-center align-items-center  ">
         {price && (
-          <button className=" mt-4 mb-4 text-black font-bold p-2 rounded-lg  hover:bg-blue-400 mb-6 lg:mb-4 ">
+          <button className=" mt-4  text-black font-bold p-2 rounded-lg  hover:bg-blue-400 mb-6 lg:mb-4 ">
             {price}
           </button>
         )}
