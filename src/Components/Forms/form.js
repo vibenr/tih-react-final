@@ -2,37 +2,43 @@ import React, { useState } from 'react'
 import Header from '../PageHeading/PageHeading'
 import { Navigate } from 'react-router-dom'
 import axios from 'axios'
+import Heading from '../Header/Header'
 function Form({ heading }) {
   const [status, setstatus] = useState('501')
   const [username, setusername] = useState('')
   const [password, setpassword] = useState('')
 
-  const url = 'https://tih-backend.herokuapp.com/login/checkadmin'
-
   function login() {
-    let data = { username, password }
+    const data = { username, password }
     console.log(data)
 
-    axios.post(url, data).then((response) => {
-      console.log(response.status)
-      if (response.status === 200) {
-        setstatus('200')
-      }
-    })
+    axios
+      .post('https://tih-backend.herokuapp.com/login/checkadmin', data)
+      .then((response) => {
+        console.log(response.status)
+        if (response.status === 200) {
+          setstatus('200')
+        }
+      })
   }
 
   return (
     <>
-      {status === '200' && <Navigate to='/addform/data' />}
+      {status === '200' && <Navigate to="/addform/data" />}
 
       {status !== '200' && (
         <>
+          <Heading />
           <div className="grid place-items-center">
             <div className="flex justify-center">
               <Header pagname={heading} />
             </div>
 
-            <form className="w-full max-w-sm mt-14 md:p-x-8" onSubmit={login} method="POST">
+            <form
+              className="w-full max-w-sm mt-14 md:p-x-8"
+              onSubmit={login}
+              method="POST"
+            >
               <div className="md:flex md:items-center mb-6">
                 <div className="md:w-1/3">
                   <label

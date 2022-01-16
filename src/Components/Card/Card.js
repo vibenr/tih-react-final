@@ -5,13 +5,12 @@ function Card({ heading, source, paragraph, button, price }) {
     <div className="max-w-sm h-auto rounded  shadow-lg  p-4  ">
       {source && (
         <>
-        <img
-          className="w-full h-1/2"
-          src={source}
-          alt="Sunset in the mountains"
-        />
-        <p className="font-bold text-3xl">{source}</p>
-      </>
+          <img
+            className="w-full h-1/2"
+            src={source}
+            alt="Sunset in the mountains"
+          />
+        </>
       )}
       <div className="h-full">
         {heading && (
