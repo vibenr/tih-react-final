@@ -52,7 +52,7 @@ useEffect(()=>{
 					<Card
 					            heading={card.title}
 								paragraph={card.description}
-								source=""
+								source={card.image}
 					/>
 					))}	
 					

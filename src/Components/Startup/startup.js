@@ -38,7 +38,7 @@ function Startup() {
                  <div className="lg:w-3/4  h-full ">
                   <img
                     className="  w-full h-full   flex-none bg-cover "
-                    src=""
+                    source={card.image}
                     alt="alternative"
                   />
                   </div>
