@@ -32,15 +32,15 @@ function Redirectform({ pageheading, routes }) {
 
           <div className="flex justify-center align-items-center ">
             <form
-              className="w-full max-w-lg mt-14"
+              className="w-full max-w-lg mt-14 p-4"
               onSubmit={(e) => {
                 submit(e)
               }}
               method="POST"
             >
-              <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="flex flex-wrap  mb-6">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 m-auto"
                   for="grid-first-name"
                 >
                   Title
@@ -58,10 +58,10 @@ function Redirectform({ pageheading, routes }) {
                   required
                 />
               </div>
-              <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="flex flex-wrap  mb-6">
                 <div className="w-full px-3">
                   <label
-                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 "
                     for="grid-password"
                   >
                     Description
@@ -80,7 +80,7 @@ function Redirectform({ pageheading, routes }) {
                 </div>
               </div>
 
-              <div className="flex flex-wrap -mx-3 mb-2">
+              <div className="flex flex-wrap  mb-2">
                 <div className="w-full md:w-full px-3 mb-6 md:mb-0">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"

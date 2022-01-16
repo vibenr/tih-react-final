@@ -31,7 +31,7 @@ function Form({ heading }) {
             <Header pagname={heading} />
           </div>
           <div className="flex justify-center mt-2 align-items-center">
-            <p className="text-red-400">*Only Admins Can Login</p>
+            <p className="text-red-400">*Only Admin Can Login</p>
           </div>
           <div class="max-h-screen flex items-center justify-center bg-gray-50 py-12  px-4 sm:px-6 lg:px-8">
             <div class="max-w-md w-full space-y-8">
