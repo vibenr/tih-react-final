@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Navigate } from 'react-router-dom'
 import Heading from '../Header/Header'
 function Login() {
-  const [status, setstatus] = useState('501')
+  const [status, setstatus] = useState('')
   const [username, setusername] = useState('')
   const [password, setpassword] = useState('')
 
@@ -20,6 +20,9 @@ function Login() {
       if (response.status === 200) {
         setstatus('200')
       }
+      else{
+        setstatus('500')
+      }
     })
   }
 
@@ -29,8 +32,9 @@ function Login() {
         <Heading />
       </div>
       {status === '200' && <Navigate to="/addform/data" />}
+{status==='500' && <p className="text-xl font-bold text-red-400"></p>}
 
-      {status !== '200' && (
+      {status !== '200'  && (
         <>
           <div className="grid place-items-center">
             <div className="flex justify-center">
