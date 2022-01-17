@@ -32,7 +32,7 @@ function Login() {
         <Heading />
       </div>
       {status === '200' && <Navigate to="/addform/data" />}
-{status==='500' && <p className="text-xl font-bold text-red-400"></p>}
+{status==='500' && <p className="text-xl font-bold text-red-400">Login With Correct Crediantials</p>}
 
       {status !== '200'  && (
         <>
