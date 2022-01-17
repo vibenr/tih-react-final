@@ -8,22 +8,21 @@ function Login() {
   const [username, setusername] = useState('')
   const [password, setpassword] = useState('')
 
- 
-
   function login(e) {
     e.preventDefault()
     let data = { username, password }
     console.log(data)
 
-    axios.post('https://tih-backend.herokuapp.com/login/checkadmin', data).then((response) => {
-      console.log(response.status)
-      if (response.status === 200) {
-        setstatus('200')
-      }
-      else{
-        setstatus('500')
-      }
-    })
+    axios
+      .post('https://tih-backend.herokuapp.com/login/checkadmin', data)
+      .then((response) => {
+        console.log(response.status)
+        if (response.status === 200) {
+          setstatus('200')
+        } else {
+          setstatus('500')
+        }
+      })
   }
 
   return (
@@ -32,9 +31,13 @@ function Login() {
         <Heading />
       </div>
       {status === '200' && <Navigate to="/addform/data" />}
-{status==='500' && <p className="text-xl font-bold text-red-400">Login With Correct Crediantials</p>}
+      {status === '500' && (
+        <p className="text-xl font-bold text-red-400">
+          Login With Correct Crediantials
+        </p>
+      )}
 
-      {status !== '200'  && (
+      {status !== '200' && (
         <>
           <div className="grid place-items-center">
             <div className="flex justify-center">
