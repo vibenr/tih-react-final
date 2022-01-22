@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import RedirectForm from '../Redirectform/Redirectform'
-
+import './data.css'
 import Addform from '../Addform/Addform'
 
 function DataForm() {
@@ -36,7 +36,7 @@ function DataForm() {
                 <li
                   onClick={() => {
                     settab('STARTUP')
-                    setroute('startup')
+                    setroute('startups')
                   }}
                 >
                   Startup

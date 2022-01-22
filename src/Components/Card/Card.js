@@ -7,7 +7,7 @@ function Card({ heading, source, paragraph, button, price }) {
         <>
           <img
             className="w-full h-1/2"
-            src={source}
+            src="https://source.unsplash.com/random"
             alt="Sunset in the mountains"
           />
         </>
@@ -19,8 +19,6 @@ function Card({ heading, source, paragraph, button, price }) {
         {paragraph && (
           <p className="text-gray-700 text-base mb-4 ">{paragraph}</p>
         )}
-      </div>
-      <div className="flex flex-col justify-center align-items-center  ">
         {price && (
           <button className=" mt-4  text-black font-bold p-2 rounded-lg  hover:bg-blue-400 mb-6 lg:mb-4 ">
             {price}
@@ -32,6 +30,8 @@ function Card({ heading, source, paragraph, button, price }) {
           </button>
         )}
       </div>
+    {/*   <div className="flex flex-col justify-center align-items-center  ">
+      </div> */}
     </div>
   )
 }
