@@ -38,7 +38,7 @@ function Startup() {
                  <div className="lg:w-3/4  h-full ">
                   <img
                     className="  w-full h-full   flex-none bg-cover "
-                    source={card.image}
+                    src="https://source.unsplash.com/random"
                     alt="alternative"
                   />
                   </div>
