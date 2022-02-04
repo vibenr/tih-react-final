@@ -5,17 +5,18 @@ import Courses from './Components/Courses/courses'
 import Startups from './Components/Startup/startup'
 import Activites from './Components/Activities/Activity'
 import About from './Components/About/About'
-import Login from './Components/LoginPage/Login'
-import Dataform from './Components/DataForm/Dataform'
+/* import Login from './Components/LoginPage/Login'
+ */
+/* import Dataform from './Components/DataForm/Dataform' */
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/addform/data" element={<Dataform />} />
+      {/*   <Route path="/addform/data" element={<Dataform />} /> */}
+  {/*       <Route path="/login" element={<Login />} /> */}
         <Route path="/services" element={<Services />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/startups" element={<Startups />} />
         <Route path="/courses" element={<Courses />} />

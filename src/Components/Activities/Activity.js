@@ -4,21 +4,13 @@ import Heading from '../PageHeading/PageHeading';
 import Header from '../Header/Header'
 
 import { useState, useEffect } from 'react';
-
+import axios from 'axios'
 function Actitvity() {
   const [initial, final] = useState([]);
   useEffect(() => {
     let servicedata = async () => {
-      await fetch(' https://tih-backend.herokuapp.com/api/activity')
-        .then((res) => {
-          if (res.ok) {
-            return res.json();
-          }
-        })
-        .then((jsonres) => {
-         
-          final(jsonres);
-        });
+     const data=await axios.get('https://tihapi.herokuapp.com/Activities')
+    console.log(data)
     };
     servicedata();
   }, []);

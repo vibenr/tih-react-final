@@ -3,21 +3,15 @@ import { useState, useEffect } from 'react'
 import Card from '../Card/Card'
 import Heading from '../PageHeading/PageHeading'
 import Header from '../Header/Header'
-
+import axios from 'axios'
 function Service() {
   const [initial, final] = useState([])
 
   useEffect(() => {
     let servicedata = async () => {
-      await fetch(' https://tih-backend.herokuapp.com/api/courses')
-        .then((res) => {
-          if (res.ok) {
-            return res.json()
-          }
-        })
-        .then((jsonres) => {
-          final(jsonres)
-        })
+      const data=await  axios.get('https://tihapi.herokuapp.com/Courses')
+      console.log(data)
+      final(data.data)
     }
     servicedata()
   }, [])
@@ -32,7 +26,7 @@ function Service() {
             initial.map((card) => (
               <Card
                 heading={card.title}
-                paragraph={card.description}
+                paragraph={card.desc}
                 source={card.image}
                 price={card.price}
                 button

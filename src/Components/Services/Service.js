@@ -3,8 +3,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import Heading from '../PageHeading/PageHeading';
 import Header from '../Header/Header'
-
-
+import axios from 'axios'
 
 
 
@@ -20,16 +19,9 @@ const [initial,final]=useState([]);
 useEffect(()=>{
 
 	const servicedata=async()=>{
-		await fetch(' https://tih-backend.herokuapp.com/api/services').then(res=>{
-			if(res.ok){
-				return res.json();
-			}
-		}).then((jsonres)=>
-		{
-			final(jsonres)
-		}
-		)
-
+	    const datas=await  axios.get('https://tihapi.herokuapp.com/Serivces')
+         console.log(datas)
+			final(datas.data)
 	}
 	servicedata();
 
@@ -51,7 +43,7 @@ useEffect(()=>{
 			     	initial && initial.map((card)=>(
 					<Card
 					            heading={card.title}
-								paragraph={card.description}
+								paragraph={card.desc}
 								source={card.image}
 					/>
 					))}	

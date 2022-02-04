@@ -21,7 +21,7 @@ function Card({ heading, source, paragraph, button, price }) {
         )}
         {price && (
           <button className=" mt-4  text-black font-bold p-2 rounded-lg  hover:bg-blue-400 mb-6 lg:mb-4 ">
-            {price}
+          ₹ {price} Only
           </button>
         )}
         {button && (
