@@ -10,9 +10,9 @@ function Service() {
 
   useEffect(() => {
     const servicedata = async () => {
-      fetch('https://tihapi.herokuapp.com/Services/').then((response) => {
-        final(response.data)
-      })
+      const datas = await axios('https://tihapi.herokuapp.com/Services/')
+      console.log(datas)
+      final(datas.data)
     }
     servicedata()
   }, [])
