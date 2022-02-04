@@ -2,15 +2,16 @@ import React from 'react'
 import Heading from '../PageHeading/PageHeading'
 import { useState, useEffect } from 'react'
 import Header from '../Header/Header'
-import axios from 'axios'
+import axios from '../../axios'
+
 function Startup() {
   const [initial, final] = useState([])
 
   useEffect(() => {
     let servicedata = async () => {
-      const data = await axios.get('https://tihapi.herokuapp.com/Startups')
-      console.log(data)
-      final(data.data)
+      const datas = await axios.get('https://tihapi.herokuapp.com/Startups')
+      console.log(datas)
+      final(datas.data)
     }
     servicedata()
   }, [])

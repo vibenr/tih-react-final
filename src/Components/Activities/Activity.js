@@ -4,7 +4,7 @@ import Heading from '../PageHeading/PageHeading';
 import Header from '../Header/Header'
 
 import { useState, useEffect } from 'react';
-import axios from 'axios'
+import axios from '../../axios'
 function Actitvity() {
   const [initial, final] = useState([]);
   useEffect(() => {
