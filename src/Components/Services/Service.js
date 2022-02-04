@@ -12,7 +12,7 @@ function Service() {
     const servicedata = async () => {
       const datas = await axios.get('https://tihapi.herokuapp.com/Services')
       console.log(datas)
-      final(datas.data)
+      /* final(datas.data) */
     }
     servicedata()
   }, [])
