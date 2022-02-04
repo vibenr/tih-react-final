@@ -10,7 +10,7 @@ function Service() {
 
   useEffect(() => {
     const servicedata = async () => {
-      const datas = await axios('https://tihapi.herokuapp.com/Services/')
+      const datas = await axios.get('https://tihapi.herokuapp.com/Services')
       console.log(datas)
       final(datas.data)
     }
