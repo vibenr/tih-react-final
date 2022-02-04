@@ -11,6 +11,7 @@ function Actitvity() {
     let servicedata = async () => {
      const data=await axios.get('https://tihapi.herokuapp.com/Activities')
     console.log(data)
+    final(data.data)
     };
     servicedata();
   }, []);

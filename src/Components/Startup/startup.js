@@ -10,6 +10,7 @@ function Startup() {
     let servicedata = async () => {
       const data = await axios.get('https://tihapi.herokuapp.com/Startups')
       console.log(data)
+      final(data.data)
     }
     servicedata()
   }, [])
