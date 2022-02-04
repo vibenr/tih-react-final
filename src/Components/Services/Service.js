@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
 import React from 'react'
+import { useState, useEffect } from 'react'
 import Card from '../Card/Card'
 import Heading from '../PageHeading/PageHeading'
 import Header from '../Header/Header'
@@ -12,7 +12,7 @@ function Service() {
     const servicedata = async () => {
       const datas = await axios.get('https://tihapi.herokuapp.com/Services')
       console.log(datas)
-      /* final(datas.data) */
+     final(datas.data) 
     }
     servicedata()
   }, [])
