@@ -3,15 +3,15 @@ import { useState, useEffect } from 'react'
 import Card from '../Card/Card'
 import Heading from '../PageHeading/PageHeading'
 import Header from '../Header/Header'
-import axios from '../../axios'
+import axios from 'axios'
 function Service() {
   const [initial, final] = useState([])
 
   useEffect(() => {
-    let servicedata = async () => {
-      const data=await  axios.get('https://tihapi.herokuapp.com/Courses')
-      console.log(data)
-      final(data.data)
+    const servicedata = async () => {
+      const datas = await axios.get('https://tihapi.herokuapp.com/Courses')
+      console.log(datas)
+      final(datas.data)
     }
     servicedata()
   }, [])

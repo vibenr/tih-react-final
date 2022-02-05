@@ -2,16 +2,17 @@ import React from 'react'
 import Heading from '../PageHeading/PageHeading'
 import { useState, useEffect } from 'react'
 import Header from '../Header/Header'
-import axios from '../../axios'
+import axios from 'axios'
 
 function Startup() {
   const [initial, final] = useState([])
 
   useEffect(() => {
-    let servicedata = async () => {
+    const servicedata = async () => {
       const datas = await axios.get('https://tihapi.herokuapp.com/Startups')
       console.log(datas)
       final(datas.data)
+      
     }
     servicedata()
   }, [])
@@ -40,7 +41,7 @@ function Startup() {
                   </p>
                   <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4   ">
                     <p className="text-grey-darker text-base mt-2">
-                      {card.description}
+                      {card.desc}
                     </p>{' '}
                   </div>
                 </div>
